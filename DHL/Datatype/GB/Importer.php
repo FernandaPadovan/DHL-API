@@ -23,12 +23,15 @@ class Importer extends Base
             'comment' => 'Name of company / business',
             'minLength' => '0',
         ),
-        'AddressLine' => array(
+        'AddressLine1' => array(
             'type' => 'string',
             'required' => true,
             'subobject' => false,
-            'comment' => 'Address Line',
-            'multivalues' => true,
+        ),
+        'AddressLine2' => array(
+            'type' => 'string',
+            'required' => false,
+            'subobject' => false,
         ),
         'City' => array(
             'type' => 'City',
