@@ -216,5 +216,10 @@ class ShipmentRequest extends Base
             'required' => false,
             'subobject' => true,
         ),
+        'Importer' => array(
+            'type' => 'Importer',
+            'required' => false,
+            'subobject' => true,
+        ),
     );
 }
