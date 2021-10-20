@@ -39,18 +39,6 @@ class Importer extends Base
             'subobject' => false,
             'comment' => 'City name',
         ),
-        'Division' => array(
-            'type' => 'Division',
-            'required' => false,
-            'subobject' => false,
-            'comment' => 'Division (e.g. state, prefecture, etc.) name',
-        ),
-        'DivisionCode' => array(
-            'type' => 'DivisionCode',
-            'required' => false,
-            'subobject' => false,
-            'comment' => 'Division (e.g. state, prefecture, etc.) code',
-        ),
         'PostalCode' => array(
             'type' => 'PostalCode',
             'required' => false,
