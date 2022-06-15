@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -48,62 +48,42 @@ class Dutiable extends Base
             'comment' => 'DeclaredValue',
             'minInclusive' => '0.00',
             'maxInclusive' => '9999999999.99',
-        ), 
+        ),
         'DeclaredCurrency' => array(
             'type' => 'CurrencyCode',
             'required' => false,
             'subobject' => false,
             'comment' => 'ISO currency code',
             'length' => '3',
-        ), 
+        ),
         'ScheduleB' => array(
             'type' => 'ScheduleB',
             'required' => false,
             'subobject' => false,
             'comment' => 'Schedule B numner',
             'maxLength' => '15',
-        ), 
+        ),
         'ExportLicense' => array(
             'type' => 'ExportLicense',
             'required' => false,
             'subobject' => false,
             'comment' => 'ExportLicense',
             'maxLength' => '16',
-        ), 
-        'ShipperEIN' => array(
-            'type' => '',
-            'required' => false,
-            'subobject' => false,
-        ), 
-        'ShipperIDType' => array(
-            'type' => '',
-            'required' => false,
-            'subobject' => false,
-        ), 
-        'ConsigneeIDType' => array(
-            'type' => '',
-            'required' => false,
-            'subobject' => false,
-        ), 
+        ),
         'ImportLicense' => array(
             'type' => 'ImportLicense',
             'required' => false,
             'subobject' => false,
             'comment' => '\"ImportLicense\"',
             'maxLength' => '16',
-        ), 
-        'ConsigneeEIN' => array(
-            'type' => '',
-            'required' => false,
-            'subobject' => false,
-        ), 
+        ),
         'TermsOfTrade' => array(
             'type' => 'TermsOfTrade',
             'required' => false,
             'subobject' => false,
             'comment' => '\"TermsOfTrade\"',
             'maxLength' => '3',
-        ), 
+        ),
         'CommerceLicensed' => array(
             'type' => 'YesNo',
             'required' => false,
@@ -111,11 +91,11 @@ class Dutiable extends Base
             'comment' => 'Boolean flag',
             'length' => '1',
             'enumeration' => 'Y,N',
-        ), 
+        ),
         'Filing' => array(
             'type' => 'Filing',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
     );
 }

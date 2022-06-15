@@ -15,20 +15,20 @@
  */
 
 /**
- * File:        AdditionalProtection.php
+ * File:        PieceDetails.php
  * Project:     DHL API
  *
  * @author      Al-Fallouji Bashar
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
- * AdditionalProtection Request model for DHL API
+ * PieceDetails Request model for DHL API
  */
-class AdditionalProtection extends Base
+class PaymentMethods extends Base
 {
     /**
      * Is this object a subobject
@@ -41,20 +41,11 @@ class AdditionalProtection extends Base
      * @var array
      */
     protected $_params = array(
-        'Code' => array(
-            'type' => 'Code',
+
+        'PaymentMethod' => array(
+            'type' => 'string',
             'required' => false,
             'subobject' => false,
-            'comment' => 'Code',
-            'length' => '2',
-            'enumeration' => 'AP,NR',
-        ), 
-        'Value' => array(
-            'type' => 'Value',
-            'required' => false,
-            'subobject' => false,
-            'comment' => 'Value',
-            'maxInclusive' => '9999999.99',
-        ), 
+        ),
     );
 }

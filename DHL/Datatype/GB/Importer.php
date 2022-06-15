@@ -1,34 +1,9 @@
 <?php
-/**
- * Note : Code is released under the GNU LGPL
- *
- * Please do not change the header of this file
- *
- * This library is free software; you can redistribute it and/or modify it under the terms of the GNU
- * Lesser General Public License as published by the Free Software Foundation; either version 2 of
- * the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- *
- * See the GNU Lesser General Public License for more details.
- */
-
-/**
- * File:        Consignee.php
- * Project:     DHL API
- *
- * @author      Al-Fallouji Bashar
- * @version     0.1
- */
 
 namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
-/**
- * Consignee Request model for DHL API
- */
-class Consignee extends Base
+class Importer extends Base
 {
     /**
      * Is this object a subobject
@@ -53,6 +28,7 @@ class Consignee extends Base
             'required' => false,
             'subobject' => false,
             'comment' => 'SuiteDepartmentName',
+            'maxLength' => '35',
         ),
         'AddressLine1' => array(
             'type' => 'string',
@@ -77,27 +53,6 @@ class Consignee extends Base
             'comment' => 'Address Line 3',
             'minLength' => '1',
             'maxLength' => '45',
-        ),
-        'StreetName' => array(
-            'type' => 'string',
-            'required' => true,
-            'subobject' => false,
-            'comment' => 'Street Name',
-            'multivalues' => true,
-        ),
-        'BuildingName' => array(
-            'type' => 'string',
-            'required' => true,
-            'subobject' => false,
-            'comment' => 'Building Name',
-            'multivalues' => true,
-        ),
-        'StreetNumber' => array(
-            'type' => 'string',
-            'required' => true,
-            'subobject' => false,
-            'comment' => 'Street Number',
-            'multivalues' => true,
         ),
         'City' => array(
             'type' => 'City',
@@ -140,6 +95,27 @@ class Consignee extends Base
             'type' => 'Contact',
             'required' => false,
             'subobject' => true,
+        ),
+        'StreetName' => array(
+            'type' => 'string',
+            'required' => true,
+            'subobject' => false,
+            'comment' => 'Street Name',
+            'multivalues' => true,
+        ),
+        'BuildingName' => array(
+            'type' => 'string',
+            'required' => true,
+            'subobject' => false,
+            'comment' => 'Building Name',
+            'multivalues' => true,
+        ),
+        'StreetNumber' => array(
+            'type' => 'string',
+            'required' => true,
+            'subobject' => false,
+            'comment' => 'Street Number',
+            'multivalues' => true,
         ),
         'RegistrationNumbers' => array(
             'type' => 'RegistrationNumber',

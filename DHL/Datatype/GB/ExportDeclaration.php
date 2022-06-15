@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -45,7 +45,7 @@ class ExportDeclaration extends Base
             'type' => '',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'IsPartiesRelation' => array(
             'type' => 'YesNo',
             'required' => false,
@@ -53,48 +53,48 @@ class ExportDeclaration extends Base
             'comment' => 'Boolean flag',
             'length' => '1',
             'enumeration' => 'Y,N',
-        ), 
+        ),
         'ECCN' => array(
             'type' => '',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'SignatureName' => array(
             'type' => 'SignatureName',
             'required' => false,
             'subobject' => false,
             'comment' => 'Signature name',
             'maxLength' => '35',
-        ), 
+        ),
         'SignatureTitle' => array(
             'type' => 'SignatureTitle',
             'required' => false,
             'subobject' => false,
             'comment' => 'Signature title',
             'maxLength' => '35',
-        ), 
+        ),
         'ExportReason' => array(
             'type' => 'ExportReason',
             'required' => false,
             'subobject' => false,
             'comment' => 'Export reason',
             'length' => '1',
-        ), 
+        ),
         'ExportReasonCode' => array(
             'type' => 'ExportReasonCode',
             'required' => false,
             'subobject' => false,
             'comment' => 'Export reason code (P:Permanent, T:Temporary, R:Re-Export)',
             'length' => '1',
-            'enumeration' => 'P,T,R',
-        ), 
+            'enumeration' => 'P,T,R,M,I,C,E,S,G,U,W,D,F',
+        ),
         'SedNumber' => array(
             'type' => 'SEDNumber',
             'required' => false,
             'subobject' => false,
             'comment' => '',
             'enumeration' => 'FTSR,XTN,SAS,ITN',
-        ), 
+        ),
         'SedNumberType' => array(
             'type' => 'SEDNumberType',
             'required' => false,
@@ -102,18 +102,197 @@ class ExportDeclaration extends Base
             'comment' => '',
             'length' => '1',
             'enumeration' => 'F,X,S,I',
-        ), 
-        'MxStateCode' => array(
-            'type' => '',
+        ),
+        'InvoiceNumber' => array(
+            'type' => 'InvoiceNumber',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
+        'InvoiceDate' => array(
+            'type' => 'InvoiceDate',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'BillToCompanyName' => array(
+            'type' => 'BillToCompanyName',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'BillToContanctName' => array(
+            'type' => 'BillToContanctName',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'BillToAddressLine1' => array(
+            'type' => 'string',
+            'required' => true,
+            'subobject' => false,
+            'comment' => 'Address Line 1',
+            'minLength' => '1',
+            'maxLength' => '45',
+        ),
+        'BillToAddressLine2' => array(
+            'type' => 'string',
+            'required' => false,
+            'subobject' => false,
+            'comment' => 'Address Line 2',
+            'minLength' => '1',
+            'maxLength' => '45',
+        ),
+        'BillToAddressLine3' => array(
+            'type' => 'string',
+            'required' => false,
+            'subobject' => false,
+            'comment' => 'Address Line 3',
+            'minLength' => '1',
+            'maxLength' => '45',
+        ),
+        'BillToCity' => array(
+            'type' => 'BillToCity',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'BillToPostcode' => array(
+            'type' => 'BillToPostcode',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'BillToSuburb' => array(
+            'type' => 'BillToSuburb',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'BillToState' => array(
+            'type' => 'BillToState',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'BillToCountryName' => array(
+            'type' => 'BillToCountryName',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'BillToPhoneNumber' => array(
+            'type' => 'BillToPhoneNumber',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'BillToPhoneNumberExtn' => array(
+            'type' => 'BillToPhoneNumberExtn',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'BillToFaxNumber' => array(
+            'type' => 'BillToFaxNumber',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'Remarks' => array(
+            'type' => 'Remarks',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'DestinationPort' => array(
+            'type' => 'DestinationPort',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'TermsOfPayment' => array(
+            'type' => 'TermsOfPayment',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'ReceiverReference' => array(
+            'type' => 'ReceiverReference',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'ExporterCode' => array(
+            'type' => 'ExporterCode',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'ReceiverReference' => array(
+            'type' => 'ReceiverReference',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'ExporterCode' => array(
+            'type' => 'ExporterCode',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'PackageMarks' => array(
+            'type' => 'string',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'OtherRemarks2' => array(
+            'type' => 'string',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'OtherRemarks3' => array(
+            'type' => 'string',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'RUBankINN' => array(
+            'type' => 'RUBankINN',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'RUBankKPP' => array(
+            'type' => 'RUBankKPP',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'RUBankOKPO' => array(
+            'type' => 'RUBankOKPO',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'RUBankOGRN' => array(
+            'type' => 'RUBankOGRN',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'RUBankSettlementAcctNumUSDEUR' => array(
+            'type' => 'RUBankSettlementAcctNumUSDEUR',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'RUBankSettlementAcctNumRUR' => array(
+            'type' => 'RUBankSettlementAcctNumRUR',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'RUBankName' => array(
+            'type' => 'RUBankName',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'AddDeclText1' => array(
+            'type' => 'AddDeclText1',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'AddDeclText2' => array(
+            'type' => 'AddDeclText2',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'AddDeclText3' => array(
+            'type' => 'AddDeclText3',
+            'required' => false,
+            'subobject' => false,
+        ),
         'ExportLineItems' => array(
             'type' => 'ExportLineItem',
             'required' => false,
             'subobject' => true,
             'multivalues' => true,
             'disableParentNode' => true,
-        ), 
+        ),
     );
 }

@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -47,17 +47,12 @@ class LabelImage extends Base
             'subobject' => false,
             'comment' => 'OutputFormat',
             'enumeration' => 'PDF,PL2,ZPL2,JPG,PNG,EPL2,EPLN,ZPLN',
-        ), 
+        ),
         'OutputImage' => array(
             'type' => 'OutputImage',
             'required' => false,
             'subobject' => false,
             'comment' => 'OutputImage',
-        ), 
-        'OutputImageNPC' => array(
-            'type' => 'string',
-            'required' => false,
-            'subobject' => false,
-        ), 
+        ),
     );
 }

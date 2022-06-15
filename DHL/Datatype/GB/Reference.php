@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -47,13 +47,14 @@ class Reference extends Base
             'subobject' => false,
             'comment' => 'Shipper reference ID',
             'maxLength' => '35',
-        ), 
+        ),
         'ReferenceType' => array(
             'type' => 'ReferenceType',
             'required' => false,
             'subobject' => false,
             'comment' => 'Shipment reference type',
-            'length' => '2',
-        ), 
+            'minLength' => '2',
+            'maxLength' => '3',
+        ),
     );
 }

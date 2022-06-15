@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -45,58 +45,58 @@ class ShipmentInfo extends Base
             'type' => 'ServiceArea',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'DestinationServiceArea' => array(
             'type' => 'ServiceArea',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'ShipperName' => array(
             'type' => 'PersonName',
             'required' => false,
             'subobject' => false,
             'comment' => 'Name',
             'maxLength' => '35',
-        ), 
+        ),
         'ShipperAccountNumber' => array(
             'type' => 'AccountNumber',
             'required' => false,
             'subobject' => false,
             'comment' => 'DHL Account Number',
             'maxLength' => '12',
-        ), 
+        ),
         'ConsigneeName' => array(
             'type' => 'PersonName',
             'required' => false,
             'subobject' => false,
             'comment' => 'Name',
             'maxLength' => '35',
-        ), 
+        ),
         'ShipmentDate' => array(
             'type' => 'dateTime',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'Pieces' => array(
             'type' => 'Piece',
             'required' => false,
             'subobject' => true,
             'multivalues' => true,
-        ), 
+        ),
         'Weight' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'WeightUnit' => array(
             'type' => '',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'EstDlvyDate' => array(
             'type' => 'dateTime',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
     );
 }

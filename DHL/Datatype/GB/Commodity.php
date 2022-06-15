@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -46,15 +46,15 @@ class Commodity extends Base
             'required' => false,
             'subobject' => false,
             'comment' => 'Commodity codes for shipment type',
-            'minLength' => '1',
-            'maxLength' => '20',
-        ), 
+            'minLength' => '2',
+            'maxLength' => '18',
+        ),
         'CommodityName' => array(
             'type' => 'CommodityName',
             'required' => false,
             'subobject' => false,
             'comment' => 'Commodity name for shipment content',
             'maxLength' => '35',
-        ), 
+        ),
     );
 }

@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Entity\GB; 
+namespace DHL\Entity\GB;
 use DHL\Entity\Base;
 
 /**
@@ -57,7 +57,7 @@ class ShipmentResponse extends Base
             'type' => 'Response',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'RegionCode' => array(
             'type' => 'string',
             'required' => false,
@@ -66,55 +66,55 @@ class ShipmentResponse extends Base
             'minLength' => '2',
             'maxLength' => '2',
             'enumeration' => 'AP,EU,AM',
-        ), 
+        ),
         'Note' => array(
             'type' => 'Note',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'AirwayBillNumber' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'DHLRoutingCode' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
             'comment' => 'Routing Code Text',
-        ), 
+        ),
         'DHLRoutingDataId' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'BillingCode' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'CurrencyCode' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
             'comment' => 'ISO currency code',
             'length' => '3',
-        ), 
+        ),
         'CourierMessage' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'DestinationServiceArea' => array(
             'type' => 'DestinationServiceArea',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'OriginServiceArea' => array(
             'type' => 'OriginServiceArea',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'PackageCharge' => array(
             'type' => 'string',
             'required' => false,
@@ -122,12 +122,12 @@ class ShipmentResponse extends Base
             'comment' => 'PackageCharge',
             'fractionDigits' => '3',
             'totalDigits' => '18',
-        ), 
+        ),
         'Rated' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'ShippingCharge' => array(
             'type' => 'string',
             'required' => false,
@@ -135,12 +135,7 @@ class ShipmentResponse extends Base
             'comment' => 'ShippingCharge',
             'fractionDigits' => '3',
             'totalDigits' => '18',
-        ), 
-        'InsuredAmount' => array(
-            'type' => 'string',
-            'required' => false,
-            'subobject' => false,
-        ), 
+        ),
         'WeightUnit' => array(
             'type' => 'string',
             'required' => false,
@@ -148,104 +143,104 @@ class ShipmentResponse extends Base
             'comment' => 'Unit of weight measurement (K:KiloGram)',
             'minLength' => '0',
             'maxLength' => '1',
-        ), 
+        ),
         'ChargeableWeight' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'DimensionalWeight' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'ReadyByTime' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'PickupCharge' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'CallInTime' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'DaysAdvanceNotice' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'ConversionRate' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'CountryCode' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
             'comment' => 'ISO country codes',
             'length' => '2',
-        ), 
+        ),
         'Pieces' => array(
             'type' => 'ShipValResponsePiece',
             'required' => false,
             'subobject' => true,
             'multivalues' => true,
-        ), 
+        ),
         'BarCodes' => array(
             'type' => 'BarCodes',
             'required' => false,
             'subobject' => true,
             'multivalues' => false,
-        ), 
+        ),
         'Piece' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
             'multivalues' => false,
-        ), 
+        ),
         'Contents' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'Reference' => array(
             'type' => 'Reference',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'Consignee' => array(
             'type' => 'Consignee',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'Shipper' => array(
             'type' => 'Shipper',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'AccountNumber' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
             'comment' => 'DHL Account Number',
             'maxLength' => '12',
-        ), 
+        ),
         'CustomerID' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'ShipmentDate' => array(
             'type' => 'ShipmentDate',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'GlobalProductCode' => array(
             'type' => 'string',
             'required' => false,
@@ -254,58 +249,53 @@ class ShipmentResponse extends Base
             'pattern' => '([A-Z0-9])*',
             'minLength' => '1',
             'maxLength' => '4',
-        ), 
+        ),
         'ProductContentCode' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'ProductShortName' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'InternalServiceCode' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
             'comment' => 'Handling feature code returned by GLS',
-        ), 
+        ),
         'DeliveryDateCode' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'DeliveryTimeCode' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'SpecialService' => array(
             'type' => 'SpecialService',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'Billing' => array(
             'type' => 'Billing',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'Dutiable' => array(
             'type' => 'Dutiable',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'ExportDeclaration' => array(
             'type' => 'ExportDeclaration',
             'required' => false,
             'subobject' => true,
-        ), 
-        'NewShipper' => array(
-            'type' => 'string',
-            'required' => false,
-            'subobject' => false,
-        ), 
+        ),
         'PLTStatus' => array(
             'type' => 'string',
             'required' => false,
@@ -313,17 +303,17 @@ class ShipmentResponse extends Base
             'comment' => 'PLTStatus',
             'length' => '1',
             'enumeration' => 'A,D,S',
-        ), 
+        ),
         'QtdSInAdCur' => array(
             'type' => 'QtdSInAdCur',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'LabelImage' => array(
             'type' => 'LabelImage',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'CustData' => array(
             'type' => 'string',
             'required' => false,
@@ -331,6 +321,6 @@ class ShipmentResponse extends Base
             'comment' => 'CustData',
             'minLength' => '1',
             'maxLength' => '100',
-        ), 
+        ),
     );
 }

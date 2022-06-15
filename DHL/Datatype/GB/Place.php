@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -49,7 +49,7 @@ class Place extends Base
 				or both (B:Business, R:Residence, C:Business Residence)',
             'length' => '1',
             'enumeration' => 'B,R,C',
-        ), 
+        ),
         'CompanyName' => array(
             'type' => 'CompanyNameValidator',
             'required' => false,
@@ -57,55 +57,72 @@ class Place extends Base
             'comment' => 'Name of company / business',
             'minLength' => '0',
             'maxLength' => '35',
-        ), 
-        'AddressLine' => array(
-            'type' => 'AddressLine',
+        ),
+        'AddressLine1' => array(
+            'type' => 'string',
             'required' => true,
             'subobject' => false,
-            'comment' => 'Address Line',
-            'maxLength' => '35',
-        ), 
+            'comment' => 'Address Line 1',
+            'minLength' => '1',
+            'maxLength' => '45',
+        ),
+        'AddressLine2' => array(
+            'type' => 'string',
+            'required' => false,
+            'subobject' => false,
+            'comment' => 'Address Line 2',
+            'minLength' => '1',
+            'maxLength' => '45',
+        ),
+        'AddressLine3' => array(
+            'type' => 'string',
+            'required' => false,
+            'subobject' => false,
+            'comment' => 'Address Line 3',
+            'minLength' => '1',
+            'maxLength' => '45',
+        ),
         'City' => array(
             'type' => 'City',
             'required' => false,
             'subobject' => false,
             'comment' => 'City name',
             'maxLength' => '35',
-        ), 
+        ),
         'CountryCode' => array(
             'type' => 'CountryCode',
             'required' => false,
             'subobject' => false,
             'comment' => 'ISO country codes',
             'length' => '2',
-        ), 
+        ),
         'DivisionCode' => array(
             'type' => 'StateCode',
             'required' => false,
             'subobject' => false,
             'comment' => 'Division (state) code.',
             'maxLength' => '35',
-        ), 
+        ),
         'Division' => array(
             'type' => 'State',
             'required' => false,
             'subobject' => false,
             'comment' => 'State',
             'maxLength' => '35',
-        ), 
+        ),
         'PostalCode' => array(
             'type' => 'PostalCode',
             'required' => false,
             'subobject' => false,
             'comment' => 'Full postal/zip code for address',
             'maxLength' => '12',
-        ), 
+        ),
         'PackageLocation' => array(
             'type' => 'PackageLocation',
             'required' => false,
             'subobject' => false,
             'comment' => 'PackageLocation',
             'maxLength' => '40',
-        ), 
+        ),
     );
 }

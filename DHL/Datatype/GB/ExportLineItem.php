@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -47,32 +47,32 @@ class ExportLineItem extends Base
             'subobject' => false,
             'comment' => '',
             'minInclusive' => '1',
-            'maxInclusive' => '200',
-        ), 
+            'maxInclusive' => '999',
+        ),
         'Quantity' => array(
             'type' => 'Quantity',
             'required' => false,
             'subobject' => false,
             'comment' => 'Quantity',
             'maxInclusive' => '32000',
-        ), 
+        ),
         'QuantityUnit' => array(
             'type' => 'QuantityUnit',
             'required' => false,
             'subobject' => false,
             'comment' => 'Quantity unit of measure (tens, hundreds, thousands, etc.)',
             'maxLength' => '8',
-        ), 
+        ),
         'Description' => array(
             'type' => '',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'Value' => array(
             'type' => '',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'IsDomestic' => array(
             'type' => 'YesNo',
             'required' => false,
@@ -80,43 +80,57 @@ class ExportLineItem extends Base
             'comment' => 'Boolean flag',
             'length' => '1',
             'enumeration' => 'Y,N',
-        ), 
+        ),
         'CommodityCode' => array(
             'type' => 'CommodityCode',
             'required' => false,
             'subobject' => false,
             'comment' => 'Commodity codes for shipment type',
-            'minLength' => '1',
-            'maxLength' => '20',
-        ), 
+            'minLength' => '2',
+            'maxLength' => '18',
+        ),
         'ScheduleB' => array(
             'type' => 'ScheduleB',
             'required' => false,
             'subobject' => false,
             'comment' => 'Schedule B numner',
             'maxLength' => '15',
-        ), 
+        ),
         'ECCN' => array(
             'type' => '',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'Weight' => array(
             'type' => '',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'License' => array(
             'type' => '',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'LicenseSymbol' => array(
             'type' => 'LicenseNumber',
             'required' => false,
             'subobject' => false,
             'comment' => 'Export license number',
             'maxLength' => '16',
-        ), 
+        ),
+        'ManufactureCountryCode' => array(
+            'type' => '',
+            'required' => true,
+            'subobject' => false,
+            'comment' => 'ISO country codes',
+            'length' => '2',
+        ),
+        'ManufactureCountryName' => array(
+            'type' => '',
+            'required' => false,
+            'subobject' => false,
+            'comment' => 'ISO country name',
+            'maxLength' => '35',
+        ),
     );
 }

@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -46,8 +46,8 @@ class Billing extends Base
             'required' => false,
             'subobject' => false,
             'comment' => 'DHL Account Number',
-            'maxLength' => '12',
-        ), 
+            'maxLength' => '9',
+        ),
         'ShippingPaymentType' => array(
             'type' => 'ShipmentPaymentType',
             'required' => false,
@@ -55,28 +55,20 @@ class Billing extends Base
             'comment' => 'Shipment payment type (S:Shipper)',
             'length' => '1',
             'enumeration' => 'S,R,T',
-        ), 
+        ),
         'BillingAccountNumber' => array(
             'type' => 'AccountNumber',
             'required' => false,
             'subobject' => false,
             'comment' => 'DHL Account Number',
-            'maxLength' => '12',
-        ), 
-        'DutyPaymentType' => array(
-            'type' => 'DutyTaxPaymentType',
-            'required' => false,
-            'subobject' => false,
-            'comment' => 'Duty and tax charge payment type (R:Recipient)',
-            'length' => '1',
-            'enumeration' => 'S,R,T',
-        ), 
+            'maxLength' => '9',
+        ),
         'DutyAccountNumber' => array(
             'type' => 'AccountNumber',
             'required' => false,
             'subobject' => false,
             'comment' => 'DHL Account Number',
-            'maxLength' => '12',
-        ), 
+            'maxLength' => '9',
+        ),
     );
 }
