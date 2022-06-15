@@ -101,11 +101,15 @@ class ExportLineItem extends Base
             'required' => false,
             'subobject' => false,
         ),
-        'Weight' => array(
-            'type' => '',
-            'required' => false,
-            'subobject' => false,
-        ),
+        'Weight' => [
+            'type'           => 'Weight',
+            'required'       => false,
+            'subobject'      => false,
+            'comment'        => 'Weight of piece or shipment',
+            'fractionDigits' => '3',
+            'minInclusive'   => '0.000',
+            'totalDigits'    => '10',
+        ],
         'License' => array(
             'type' => '',
             'required' => false,

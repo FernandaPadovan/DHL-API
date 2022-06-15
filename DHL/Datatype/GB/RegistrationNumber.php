@@ -15,7 +15,7 @@
  */
 
 /**
- * File:        Request.php
+ * File:        RegistrationNumber.php
  * Project:     DHL API
  *
  * @author      Al-Fallouji Bashar
@@ -26,9 +26,9 @@ namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
- * Request Request model for DHL API
+ * RegistrationNumber Request model for DHL API
  */
-class Request extends Base
+class RegistrationNumber extends Base
 {
     /**
      * Is this object a subobject
@@ -41,15 +41,26 @@ class Request extends Base
      * @var array
      */
     protected $_params = array(
-        'ServiceHeader' => array(
-            'type' => 'ServiceHeader',
+        'Number' => array(
+            'type' => 'Number',
             'required' => false,
-            'subobject' => true,
+            'subobject' => false,
+            'comment' => '',
+            'maxLength' => '35',
         ),
-        'MetaData' => array(
-            'type' => 'MetaData',
-            'required' => true,
-            'subobject' => true,
+        'NumberTypeCode' => array(
+            'type' => 'NumberTypeCode',
+            'required' => false,
+            'subobject' => false,
+            'comment' => 'NumberTypeCode',
+            'enumeration' => 'SDT,VAT,FTZ,DAN,TAN,DTF,CNP,DUN,EIN,EOR,SSN,FED,STA',
+        ),
+        'NumberIssuerCountryCode' => array(
+            'type' => 'NumberIssuerCountryCode',
+            'required' => false,
+            'subobject' => false,
+            'comment' => 'ISO country codes',
+            'length' => '2',
         ),
     );
 }

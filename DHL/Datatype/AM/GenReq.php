@@ -15,89 +15,70 @@
  */
 
 /**
- * File:        KnownTrackingRequest.php
+ * File:        GenReq.php
  * Project:     DHL API
  *
  * @author      Al-Fallouji Bashar
  * @version     0.1
  */
 
-namespace DHL\Entity\GB;
-use DHL\Entity\Base;
+namespace DHL\Datatype\AM;
+use DHL\Datatype\Base;
 
 /**
- * KnownTrackingRequest Request model for DHL API
+ * GenReq Request model for DHL API
  */
-class KnownTrackingRequest extends Base
+class GenReq extends Base
 {
     /**
      * Is this object a subobject
      * @var boolean
      */
-    protected $_isSubobject = false;
+    protected $_isSubobject = true;
 
     /**
-     * Name of the service
-     * @var string
-     */
-    protected $_serviceName = 'KnownTrackingRequest';
-
-    /**
-     * @var string
-     * Service XSD
-     */
-    protected $_serviceXSD = 'KnownTrackingRequest.xsd';
-
-     /**
-     * Display the metadata element
-     * @var boolean
-     */
-    protected $_displayMetaData = false;
-
-    /**
-     * Parameters to be send in the body
+     * Parameters of the datatype
      * @var array
      */
-    protected $_bodyParams = array(
-        'LanguageCode' => array(
+    protected $_params = array(
+        'OSINFO' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-            'comment' => 'ISO Language Code',
-            'maxLength' => '2',
+            'comment' => 'It finds all valid product and service combinations.',
+            'length' => '1',
+            'enumeration' => 'Y,N',
         ),
-        'AWBNumber' => array(
+        'NXTPU' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-            'comment' => 'Airway bill number',
-            'maxLength' => '10',
+            'comment' => 'If pickup isn’t possible on requested pickup day. It finds next possible pickup.',
+            'length' => '1',
+            'enumeration' => 'Y,N',
         ),
-        'LPNumber' => array(
+        'FCNTWTYCD' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
+            'comment' => 'It specifies the facility network code.',
+            'enumeration' => 'DD,TD,AL',
         ),
-        'LevelOfDetails' => array(
+        'CUSTAGRIND' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-            'comment' => 'Checkpoint details selection flag',
-            'enumeration' => 'LAST_CHECK_POINT_ONLY,ALL_CHECK_POINTS',
+            'comment' => 'Specifies customer agreement indicator for product and services.',
+            'length' => '1',
+            'enumeration' => 'Y,N',
         ),
-        'PiecesEnabled' => array(
+        'VLDTRT_DD' => array(
             'type' => 'string',
             'required' => false,
             'subobject' => false,
-            'comment' => 'Pieces Enabling Flag',
-            'enumeration' => 'S,B,P',
-        ),
-        'CountryCode' => array(
-            'type' => 'string',
-            'required' => false,
-            'subobject' => false,
-            'comment' => 'ISO country codes',
-            'length' => '2',
+            'comment' => 'Specifies whether the validation is required on ready time against the pickup window start time on DDI product.',
+            'length' => '1',
+            'enumeration' => 'Y,N',
         ),
     );
 }

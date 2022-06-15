@@ -53,8 +53,8 @@ class Shipper extends Base
             'required' => false,
             'subobject' => false,
             'comment' => 'Name of company / business',
-            'minLength' => '0',
-            'maxLength' => '35',
+            'minLength' => '2',
+            'maxLength' => '100',
         ),
         'SuiteDepartmentName' => array(
             'type' => 'SuiteDepartmentName',

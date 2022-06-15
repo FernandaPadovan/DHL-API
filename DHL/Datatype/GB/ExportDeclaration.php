@@ -42,7 +42,7 @@ class ExportDeclaration extends Base
      */
     protected $_params = array(
         'InterConsignee' => array(
-            'type' => '',
+            'type' => 'string',
             'required' => false,
             'subobject' => false,
         ),
@@ -293,6 +293,11 @@ class ExportDeclaration extends Base
             'subobject' => true,
             'multivalues' => true,
             'disableParentNode' => true,
+        ),
+        'ShipmentDocument' => array(
+            'type' => 'ShipmentDocument',
+            'required' => false,
+            'subobject' => false,
         ),
     );
 }

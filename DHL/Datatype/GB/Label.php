@@ -41,6 +41,11 @@ class Label extends Base
      * @var array
      */
     protected $_params = array(
+        'HideAccount' => array(
+            'type' => 'HideAccount',
+            'required' => false,
+            'subobject' => false,
+        ),
         'LabelTemplate' => array(
             'type' => 'LabelTemplate',
             'required' => false,
