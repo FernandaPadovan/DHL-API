@@ -15,7 +15,7 @@
  */
 
 /**
- * File:        LabelImage.php
+ * File:        AdditionalInformationType.php
  * Project:     DHL API
  *
  * @author      Al-Fallouji Bashar
@@ -26,9 +26,9 @@ namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
- * LabelImage Request model for DHL API
+ * AdditionalInformationType Request model for DHL API
  */
-class LabelImage extends Base
+class AdditionalInformationType extends Base
 {
     /**
      * Is this object a subobject
@@ -41,27 +41,20 @@ class LabelImage extends Base
      * @var array
      */
     protected $_params = array(
-        'OutputFormat' => array(
-            'type' => 'OutputFormat',
-            'required' => false,
-            'subobject' => false,
-            'comment' => 'OutputFormat',
-            'enumeration' => 'PDF,PL2,ZPL2,JPG,PNG,EPL2,EPLN,ZPLN',
-        ),
-        'OutputImage' => array(
-            'type' => 'OutputImage',
-            'required' => false,
-            'subobject' => false,
-            'comment' => 'OutputImage',
-        ),
-        'MultiLabels' => array(
+        'DocName' => array(
             'type' => 'string',
-            'required' => false,
-            'subobject' => true,
-            'comment' => 'MultiLabels',
-            'multivalues' => true,
+            'required' => true,
+            'subobject' => false,
         ),
-
-
+        'DocFormat' => array(
+            'type' => 'string',
+            'required' => true,
+            'length' => '3',
+        ),
+        'DocImageVal' => array(
+            'type' => 'DocImageVal',
+            'required' => true,
+            'subobject' => false,
+        ),
     );
 }

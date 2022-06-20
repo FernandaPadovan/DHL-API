@@ -1,0 +1,17 @@
+{
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#772ce89a",
+        "editor.selectionHighlightBackground": "#b809cfd0",
+        "editor.inactiveSelectionBackground": "#772ce89a",
+        "tree.indentGuidesStroke": "#79c079",
+        "activityBar.activeBackground": "#ff88006b",
+        "activityBar.inactiveForeground": "#ffac4094",
+        "diffEditor.insertedTextBackground": "#069c2241",
+        "diffEditor.removedTextBackground": "#be050550",
+        "editor.background": "#0d0d1d",
+        "bookmarks.lineBackground": "#0044ff86",
+        "activityBar.background": "#321280",
+        "titleBar.activeBackground": "#4719B3",
+        "titleBar.activeForeground": "#FDFCFF"
+    }
+}

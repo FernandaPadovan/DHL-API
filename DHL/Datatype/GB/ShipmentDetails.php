@@ -129,5 +129,43 @@ class ShipmentDetails extends Base
             'minLength' => '1',
             'maxLength' => '100',
         ),
+        'ShipmentCharges' => array(
+            'type' => 'ShipmentCharges',
+            'required' => false,
+            'subobject' => false,
+            'comment' => 'ShipmentCharges',
+            'minInclusive' => '0.001',
+            'maxInclusive' => '999999999999999999.999',
+        ),
+        'ParentShipmentIdentificationNumber' => array(
+            'type' => 'AWBNumber',
+            'required' => false,
+            'subobject' => false,
+            'comment' => '>Airway bill number',
+            'maxLength' => '10',
+        ),
+        'ParentShipmentGlobalProductCode' => array(
+            'type' => 'GlobalProductCode',
+            'required' => false,
+            'subobject' => false,
+            'minLength' => '1',
+            'maxLength' => '6',
+            'pattern' => '([A-Z0-9])*',
+        ),
+        'ParentShipmentPackagesCount' => array(
+            'type' => 'ParentShipmentPackagesCount',
+            'required' => false,
+            'subobject' => false,
+            'minInclusive' => '1',
+        ),
+
+
+
+
+
+
+
+
+
     );
 }

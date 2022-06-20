@@ -90,5 +90,38 @@ class Piece extends Base
             'comment' => 'Piece contents description',
             'maxLength' => '35',
         ),
+        'ParentPieceIdentificationNumber' => array(
+            'type' => 'PieceID',
+            'required' => false,
+            'subobject' => false,
+            'maxLength' => '35',
+        ),
+        'PieceIdentificationNumber' => array(
+            'type' => 'PieceID',
+            'required' => false,
+            'subobject' => false,
+            'maxLength' => '35',
+        ),
+        'UseOwnPieceIdentificationNumber' => array(
+            'type' => 'string',
+            'required' => false,
+            'subobject' => false,
+            'maxLength' => '1',
+            'enumeration' => 'Y,N',
+
+        ),
+
+
+
+
+
+
+
+
+
+
+
+
+
     );
 }

@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -45,11 +45,11 @@ class ErrorResponse extends Base
             'type' => 'ServiceHeader',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
         'Status' => array(
             'type' => 'Status',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
     );
 }

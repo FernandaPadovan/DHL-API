@@ -15,7 +15,7 @@
  */
 
 /**
- * File:        LabelImage.php
+ * File:        CustomsDocument.php
  * Project:     DHL API
  *
  * @author      Al-Fallouji Bashar
@@ -26,9 +26,9 @@ namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
- * LabelImage Request model for DHL API
+ * CustomsDocument Request model for DHL API
  */
-class LabelImage extends Base
+class CustomsDocument extends Base
 {
     /**
      * Is this object a subobject
@@ -41,27 +41,18 @@ class LabelImage extends Base
      * @var array
      */
     protected $_params = array(
-        'OutputFormat' => array(
-            'type' => 'OutputFormat',
-            'required' => false,
+        'CustomsDocumentType' => array(
+            'type' => 'CustomsDocumentType',
+            'required' => true,
             'subobject' => false,
-            'comment' => 'OutputFormat',
-            'enumeration' => 'PDF,PL2,ZPL2,JPG,PNG,EPL2,EPLN,ZPLN',
+            'enumeration' => '972,AHC,ATA,ATR,CHD,CHP,CIT,COO,DEX,EU1,EU2,EUS,FMA,PHY,VET,VEX,CRL,CSD,PPY,CI2,CIV,DOV,INV,PFI,ALC,HLC,JLC,LIC,LNP,PLI,DLI,NID,PAS,CHA,CPA,POA,BEX,DGD,IPA,T2M,TAD,TCS,ROD,EXL,HWB,ELP',
         ),
-        'OutputImage' => array(
-            'type' => 'OutputImage',
-            'required' => false,
+        'CustomsDocumentID' => array(
+            'type' => 'CustomsDocumentID',
+            'required' => true,
             'subobject' => false,
-            'comment' => 'OutputImage',
+            'maxLength' => '35',
         ),
-        'MultiLabels' => array(
-            'type' => 'string',
-            'required' => false,
-            'subobject' => true,
-            'comment' => 'MultiLabels',
-            'multivalues' => true,
-        ),
-
 
     );
 }

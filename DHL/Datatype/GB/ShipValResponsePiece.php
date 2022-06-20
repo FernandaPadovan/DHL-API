@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -37,7 +37,7 @@ class ShipValResponsePiece extends Base
     protected $_isSubobject = true;
 
     /**
-     * Parent node name of the object 
+     * Parent node name of the object
      * @var string
      */
     protected $_xmlNodeName = 'Piece';
@@ -52,22 +52,22 @@ class ShipValResponsePiece extends Base
             'required' => true,
             'subobject' => false,
             'comment' => 'Piece Number',
-        ), 
+        ),
         'Depth' => array(
             'type' => 'positiveInteger',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'Width' => array(
             'type' => 'positiveInteger',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'Height' => array(
             'type' => 'positiveInteger',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'Weight' => array(
             'type' => 'Weight',
             'required' => false,
@@ -77,7 +77,7 @@ class ShipValResponsePiece extends Base
             'minInclusive' => '0.000',
             'maxInclusive' => '999999.999',
             'totalDigits' => '10',
-        ), 
+        ),
         'PackageType' => array(
             'type' => 'PackageType',
             'required' => false,
@@ -87,7 +87,7 @@ class ShipValResponsePiece extends Base
 				Box, DF-DHL Flyer, YP-Your packaging)',
             'length' => '2',
             'enumeration' => 'BD,BP,CP,DC,DF,DM,ED,EE,FR,JB,JD,JJ,JP,OD,PA,YP',
-        ), 
+        ),
         'DimWeight' => array(
             'type' => 'Weight',
             'required' => false,
@@ -97,31 +97,37 @@ class ShipValResponsePiece extends Base
             'minInclusive' => '0.000',
             'maxInclusive' => '999999.999',
             'totalDigits' => '10',
-        ), 
+        ),
         'PieceContents' => array(
             'type' => 'PieceContents',
             'required' => false,
             'subobject' => false,
             'comment' => 'Piece contents description',
             'maxLength' => '35',
-        ), 
+        ),
+        'PieceReference' => array(
+            'type' => 'Reference',
+            'required' => false,
+            'subobject' => true,
+            'multivalues' => true,
+        ),
         'DataIdentifier' => array(
             'type' => 'string',
             'required' => true,
             'subobject' => false,
-        ), 
+        ),
         'LicensePlate' => array(
             'type' => 'PieceID',
             'required' => true,
             'subobject' => false,
             'comment' => 'Piece ID',
             'maxLength' => '35',
-        ), 
+        ),
         'LicensePlateBarCode' => array(
             'type' => 'BarCode',
             'required' => true,
             'subobject' => false,
             'comment' => '',
-        ), 
+        ),
     );
 }

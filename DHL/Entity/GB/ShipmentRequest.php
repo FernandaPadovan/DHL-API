@@ -199,10 +199,53 @@ class ShipmentRequest extends Base
             'required' => false,
             'subobject' => false,
         ),
+        'RequestQRCode' => array(
+            'type' => 'YesNo',
+            'required' => false,
+            'subobject' => false,
+            'length' => '1',
+            'enumeration' => 'Y,N',
+        ),
+        'RequestTransportLabel' => array(
+            'type' => 'YesNo',
+            'required' => false,
+            'subobject' => false,
+            'length' => '1',
+            'enumeration' => 'Y,N',
+        ),
+
+
+
+
+
+
+
+
         'Label' => array(
             'type' => 'Label',
             'required' => false,
             'subobject' => true,
+        ),
+        'SinglePieceImage' => array(
+            'type' => 'YesNo',
+            'required' => false,
+            'subobject' => false,
+            'maxlength' => '1',
+            'enumeration' => 'Y,N',
+        ),
+        'ShipmentIdentificationNumber' => array(
+            'type' => 'AWBNumber',
+            'required' => false,
+            'subobject' => false,
+            'maxLength' => '10',
+        ),
+
+        'UseOwnShipmentIdentificationNumber' => array(
+            'type' => 'string',
+            'required' => false,
+            'subobject' => false,
+            'maxlength' => '1',
+            'enumeration' => 'Y,N',
         ),
         'Importer' => array(
             'type' => 'Importer',

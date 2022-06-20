@@ -96,6 +96,12 @@ class Importer extends Base
             'required' => false,
             'subobject' => true,
         ),
+        'Suburb' => array(
+            'type' => 'Suburb',
+            'required' => false,
+            'subobject' => false,
+            'maxLength' => '35',
+        ),
         'StreetName' => array(
             'type' => 'string',
             'required' => true,

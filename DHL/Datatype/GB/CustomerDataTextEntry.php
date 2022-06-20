@@ -15,7 +15,7 @@
  */
 
 /**
- * File:        LabelImage.php
+ * File:        CustomerDataTextEntry.php
  * Project:     DHL API
  *
  * @author      Al-Fallouji Bashar
@@ -26,9 +26,9 @@ namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
- * LabelImage Request model for DHL API
+ * CustomerDataTextEntry Request model for DHL API
  */
-class LabelImage extends Base
+class CustomerDataTextEntry extends Base
 {
     /**
      * Is this object a subobject
@@ -41,27 +41,20 @@ class LabelImage extends Base
      * @var array
      */
     protected $_params = array(
-        'OutputFormat' => array(
-            'type' => 'OutputFormat',
-            'required' => false,
+        'CustomerDataTextNumber' => array(
+            'type' => 'CustomerDataTextNumber',
+            'required' => true,
             'subobject' => false,
-            'comment' => 'OutputFormat',
-            'enumeration' => 'PDF,PL2,ZPL2,JPG,PNG,EPL2,EPLN,ZPLN',
+            'minLength' => '1',
+            'maxLength' => '1',
+            'pattern' => '([1-6])*',
         ),
-        'OutputImage' => array(
-            'type' => 'OutputImage',
-            'required' => false,
+        'CustomerDataText' => array(
+            'type' => 'CustomerDataText',
+            'required' => true,
             'subobject' => false,
-            'comment' => 'OutputImage',
+            'comment' => '>Customs Invoice - Customer Data Text in COMMERCIAL_INVOICE_04 template ',
+            'maxLength' => '45',
         ),
-        'MultiLabels' => array(
-            'type' => 'string',
-            'required' => false,
-            'subobject' => true,
-            'comment' => 'MultiLabels',
-            'multivalues' => true,
-        ),
-
-
     );
 }

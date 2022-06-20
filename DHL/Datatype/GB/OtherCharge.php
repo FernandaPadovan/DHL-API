@@ -15,7 +15,7 @@
  */
 
 /**
- * File:        RegistrationNumber.php
+ * File:        OtherCharge.php
  * Project:     DHL API
  *
  * @author      Al-Fallouji Bashar
@@ -26,9 +26,9 @@ namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
- * RegistrationNumber Request model for DHL API
+ * OtherCharge Request model for DHL API
  */
-class RegistrationNumber extends Base
+class OtherCharge extends Base
 {
     /**
      * Is this object a subobject
@@ -41,23 +41,51 @@ class RegistrationNumber extends Base
      * @var array
      */
     protected $_params = array(
+        'OtherChargeCaption' => array(
+            'type' => 'OtherChargeCaption',
+            'required' => false,
+            'subobject' => false,
+        ),
+        'OtherChargeValue' => array(
+            'type' => 'OtherChargeValue',
+            'required' => true,
+            'subobject' => false,
+            'totalDigits' => '18',
+            'fractionDigits' => '3',
+        ),
+        'OtherChargeType' => array(
+            'type' => 'OtherChargeType',
+            'required' => true,
+            'subobject' => false,
+            'maxLength' => '5',
+            'enumeration' => 'ADMIN,DELIV,DOCUM,EXPED,EXCHA,FRCST,SSRGE,LOGST,SOTHR,SPKGN,PICUP,HRCRG,VATCR,INSCH,REVCH',
+        ),
+
+
+        TODO: For full list of allowed type code
+        values refer to Reference_Data.xlsx
+        on <OtherChargeType> section
+
+
+
+
         'Number' => array(
             'type' => 'Number',
-            'required' => true,
+            'required' => false,
             'subobject' => false,
             'comment' => '',
             'maxLength' => '35',
         ),
         'NumberTypeCode' => array(
             'type' => 'NumberTypeCode',
-            'required' => true,
+            'required' => false,
             'subobject' => false,
             'comment' => 'NumberTypeCode',
             'enumeration' => 'SDT,VAT,FTZ,DAN,TAN,DTF,CNP,DUN,EIN,EOR,SSN,FED,STA',
         ),
         'NumberIssuerCountryCode' => array(
             'type' => 'NumberIssuerCountryCode',
-            'required' => true,
+            'required' => false,
             'subobject' => false,
             'comment' => 'ISO country codes',
             'length' => '2',

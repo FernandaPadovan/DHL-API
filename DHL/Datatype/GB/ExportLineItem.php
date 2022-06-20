@@ -123,18 +123,49 @@ class ExportLineItem extends Base
             'maxLength' => '16',
         ),
         'ManufactureCountryCode' => array(
-            'type' => '',
+            'type' => 'CountryCode',
             'required' => true,
             'subobject' => false,
             'comment' => 'ISO country codes',
             'length' => '2',
         ),
         'ManufactureCountryName' => array(
-            'type' => '',
+            'type' => 'CountryName',
             'required' => false,
             'subobject' => false,
             'comment' => 'ISO country name',
             'maxLength' => '35',
         ),
+
+        'AdditionalInformation' => array(
+            'type' => 'AdditionalInformationType',
+            'required' => false,
+            'subobject' => true,
+            'multivalues' => true,
+            'comment' => 'Additional Informations for export line item ',
+        ),
+        'ImportCommodityCode' => array(
+            'type' => 'CommodityCode',
+            'required' => false,
+            'subobject' => false,
+            'comment' => 'Commodity codes for shipment type ',
+            'minLength' => '2',
+            'maxLength' => '18',
+        ),
+        'ItemReferences' => array(
+            'type' => 'ItemReference',
+            'required' => false,
+            'subobject' => true,
+            'comment' => 'Customs Invoice Reference entry<',
+            'multivalues' => true,
+        ),
+        'CustomsPaperworks' => array(
+            'type' => 'CustomsPaperwork',
+            'required' => false,
+            'subobject' => true,
+            'comment' => "Export Declaration Line Item's Customs Paperworks ",
+            'multivalues' => true,
+        ),
+
     );
 }

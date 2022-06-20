@@ -15,7 +15,7 @@
  */
 
 /**
- * File:        LabelImage.php
+ * File:        ItemReference.php
  * Project:     DHL API
  *
  * @author      Al-Fallouji Bashar
@@ -26,9 +26,9 @@ namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
- * LabelImage Request model for DHL API
+ * ItemReference Request model for DHL API
  */
-class LabelImage extends Base
+class ItemReference extends Base
 {
     /**
      * Is this object a subobject
@@ -41,27 +41,21 @@ class LabelImage extends Base
      * @var array
      */
     protected $_params = array(
-        'OutputFormat' => array(
-            'type' => 'OutputFormat',
-            'required' => false,
+        'ItemReferenceType' => array(
+            'type' => 'ItemReferenceType',
+            'required' => true,
             'subobject' => false,
-            'comment' => 'OutputFormat',
-            'enumeration' => 'PDF,PL2,ZPL2,JPG,PNG,EPL2,EPLN,ZPLN',
+            'minLength' => '2',
+            'maxLength' => '3',
+            'enumeration' => 'AAJ,ABW,AFE,ALX,BRD,DGC,INB,MAK,PAN,PON,SE,SON,OID,DTC,DTM,DTQ,DTR,ITR,MID,OED,OET,OOR,SME,USM,AAM,CFR,DOM,FOR,USG,MAT,NLR',
         ),
-        'OutputImage' => array(
-            'type' => 'OutputImage',
-            'required' => false,
+        'ItemReferenceNumber' => array(
+            'type' => 'ItemReferenceNumber',
+            'required' => true,
             'subobject' => false,
-            'comment' => 'OutputImage',
+            'totalDigits' => '18',
+            'fractionDigits' => '3',
+            'maxLength' => '35',
         ),
-        'MultiLabels' => array(
-            'type' => 'string',
-            'required' => false,
-            'subobject' => true,
-            'comment' => 'MultiLabels',
-            'multivalues' => true,
-        ),
-
-
     );
 }

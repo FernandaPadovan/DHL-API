@@ -15,7 +15,7 @@
  */
 
 /**
- * File:        LabelImage.php
+ * File:        InvoiceReference.php
  * Project:     DHL API
  *
  * @author      Al-Fallouji Bashar
@@ -26,9 +26,9 @@ namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
- * LabelImage Request model for DHL API
+ * InvoiceReference Request model for DHL API
  */
-class LabelImage extends Base
+class InvoiceReference extends Base
 {
     /**
      * Is this object a subobject
@@ -41,27 +41,17 @@ class LabelImage extends Base
      * @var array
      */
     protected $_params = array(
-        'OutputFormat' => array(
-            'type' => 'OutputFormat',
+        'InvoiceReferenceType' => array(
+            'type' => 'InvoiceReferenceType',
+            'required' => true,
+            'subobject' => false,
+            'enumeration' => 'ACL,CID,CN,CU,ITN,UCN,UCN,OID,PON,RMA,AAM,ABT,ADA,AES,AFD,ANT,BKN,BOL,CDN,COD,DSC,FF,FN,FTR,HWB,IBC,IPP,LLR,MAB,MWB,OBC,PD,PRN,RTL,SID,SS,SWN',
+        ),
+        'InvoiceReferenceNumber' => array(
+            'type' => 'InvoiceReferenceNumber',
             'required' => false,
             'subobject' => false,
-            'comment' => 'OutputFormat',
-            'enumeration' => 'PDF,PL2,ZPL2,JPG,PNG,EPL2,EPLN,ZPLN',
+            'maxLength' => '35',
         ),
-        'OutputImage' => array(
-            'type' => 'OutputImage',
-            'required' => false,
-            'subobject' => false,
-            'comment' => 'OutputImage',
-        ),
-        'MultiLabels' => array(
-            'type' => 'string',
-            'required' => false,
-            'subobject' => true,
-            'comment' => 'MultiLabels',
-            'multivalues' => true,
-        ),
-
-
     );
 }
