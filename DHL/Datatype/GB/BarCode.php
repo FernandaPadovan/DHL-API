@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -46,6 +46,6 @@ class BarCode extends Base
             'required' => false,
             'subobject' => false,
             'comment' => '',
-        ), 
+        ),
     );
 }

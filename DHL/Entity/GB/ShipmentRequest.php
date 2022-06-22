@@ -213,14 +213,6 @@ class ShipmentRequest extends Base
             'length' => '1',
             'enumeration' => 'Y,N',
         ),
-
-
-
-
-
-
-
-
         'Label' => array(
             'type' => 'Label',
             'required' => false,
@@ -239,7 +231,6 @@ class ShipmentRequest extends Base
             'subobject' => false,
             'maxLength' => '10',
         ),
-
         'UseOwnShipmentIdentificationNumber' => array(
             'type' => 'string',
             'required' => false,

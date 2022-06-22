@@ -37,22 +37,29 @@ class QRCode extends Base
     protected $_isSubobject = true;
 
     /**
+     * Parent node name of the object
+     * @var string
+     */
+    protected $_xmlNodeName = 'Piece';
+
+    /**
      * Parameters of the datatype
      * @var array
      */
-
-     TODO: Investigar o facto de o qrcode ser um objeto ??
     protected $_params = array(
-
-
-
-        'QRCodeID' => array(
-            'type' => 'PieceID',
+        'ImageFormat' => array(
+            'type' => 'string',
             'required' => false,
             'subobject' => false,
-            'comment' => 'Piece ID',
-            'maxLength' => '35',
         ),
-
+        'Image' => array(
+            'type' => 'string',
+            'required' => false,
+            'subobject' => false,
+        ),
     );
 }
+
+
+
+

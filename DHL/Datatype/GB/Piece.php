@@ -90,6 +90,12 @@ class Piece extends Base
             'comment' => 'Piece contents description',
             'maxLength' => '35',
         ),
+        'PieceReference' => array(
+            'type' => 'Reference',
+            'required' => false,
+            'subobject' => true,
+            'multivalues' => true,
+        ),
         'ParentPieceIdentificationNumber' => array(
             'type' => 'PieceID',
             'required' => false,
@@ -110,18 +116,5 @@ class Piece extends Base
             'enumeration' => 'Y,N',
 
         ),
-
-
-
-
-
-
-
-
-
-
-
-
-
     );
 }

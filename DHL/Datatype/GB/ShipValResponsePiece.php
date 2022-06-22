@@ -129,5 +129,11 @@ class ShipValResponsePiece extends Base
             'subobject' => false,
             'comment' => '',
         ),
+        'QRCode' => array(
+            'type' => 'Response_QRCode',
+            'required' => true,
+            'subobject' => true,
+            'multivalues' => true,
+        ),
     );
 }

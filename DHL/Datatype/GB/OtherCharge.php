@@ -60,15 +60,6 @@ class OtherCharge extends Base
             'maxLength' => '5',
             'enumeration' => 'ADMIN,DELIV,DOCUM,EXPED,EXCHA,FRCST,SSRGE,LOGST,SOTHR,SPKGN,PICUP,HRCRG,VATCR,INSCH,REVCH',
         ),
-
-
-        TODO: For full list of allowed type code
-        values refer to Reference_Data.xlsx
-        on <OtherChargeType> section
-
-
-
-
         'Number' => array(
             'type' => 'Number',
             'required' => false,

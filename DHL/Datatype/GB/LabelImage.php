@@ -61,7 +61,5 @@ class LabelImage extends Base
             'comment' => 'MultiLabels',
             'multivalues' => true,
         ),
-
-
     );
 }

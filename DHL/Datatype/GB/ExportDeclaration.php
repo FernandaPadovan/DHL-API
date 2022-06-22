@@ -184,7 +184,6 @@ class ExportDeclaration extends Base
             'required' => false,
             'subobject' => false,
         ),
-
         'BillToPhoneNumber' => array(
             'type' => 'BillToPhoneNumber',
             'required' => false,
@@ -405,19 +404,5 @@ class ExportDeclaration extends Base
             'subobject' => true,
             'multivalues' => true,
         ),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     );
 }

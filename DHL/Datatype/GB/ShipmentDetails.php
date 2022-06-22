@@ -158,14 +158,5 @@ class ShipmentDetails extends Base
             'subobject' => false,
             'minInclusive' => '1',
         ),
-
-
-
-
-
-
-
-
-
     );
 }

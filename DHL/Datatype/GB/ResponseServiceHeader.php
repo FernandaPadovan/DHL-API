@@ -22,7 +22,7 @@
  * @version     0.1
  */
 
-namespace DHL\Datatype\GB; 
+namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
@@ -45,7 +45,7 @@ class ResponseServiceHeader extends Base
             'type' => 'dateTime',
             'required' => false,
             'subobject' => false,
-        ), 
+        ),
         'MessageReference' => array(
             'type' => 'MessageReference',
             'required' => false,
@@ -53,7 +53,7 @@ class ResponseServiceHeader extends Base
             'comment' => 'Reference to the requested Message',
             'minLength' => '28',
             'maxLength' => '32',
-        ), 
+        ),
         'SiteID' => array(
             'type' => 'SiteID',
             'required' => false,
@@ -61,6 +61,6 @@ class ResponseServiceHeader extends Base
             'comment' => 'Site ID used for verifying the sender',
             'minLength' => '6',
             'maxLength' => '20',
-        ), 
+        ),
     );
 }
