@@ -15,7 +15,7 @@
  */
 
 /**
- * File:        AdditionalInformationType.php
+ * File:        PieceReference.php
  * Project:     DHL API
  *
  * @author      Al-Fallouji Bashar
@@ -26,9 +26,9 @@ namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
- * AdditionalInformationType Request model for DHL API
+ * PieceReference Request model for DHL API
  */
-class AdditionalInformationType extends Base
+class PieceReference extends Base
 {
     /**
      * Is this object a subobject
