@@ -374,7 +374,7 @@ class ExportDeclaration extends Base
             'type' => 'ShipmentPurpose',
             'required' => false,
             'subobject' => false,
-            'enumeration' => 'PERSONAL,COMMERCIAL',,
+            'enumeration' => 'PERSONAL,COMMERCIAL',
         ),
         'CustomsDocuments' => array(
             'type' => 'CustomsDocument',
