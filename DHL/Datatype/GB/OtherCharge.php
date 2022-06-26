@@ -60,26 +60,6 @@ class OtherCharge extends Base
             'maxLength' => '5',
             'enumeration' => 'ADMIN,DELIV,DOCUM,EXPED,EXCHA,FRCST,SSRGE,LOGST,SOTHR,SPKGN,PICUP,HRCRG,VATCR,INSCH,REVCH',
         ),
-        'Number' => array(
-            'type' => 'Number',
-            'required' => false,
-            'subobject' => false,
-            'comment' => '',
-            'maxLength' => '35',
-        ),
-        'NumberTypeCode' => array(
-            'type' => 'NumberTypeCode',
-            'required' => false,
-            'subobject' => false,
-            'comment' => 'NumberTypeCode',
-            'enumeration' => 'SDT,VAT,FTZ,DAN,TAN,DTF,CNP,DUN,EIN,EOR,SSN,FED,STA',
-        ),
-        'NumberIssuerCountryCode' => array(
-            'type' => 'NumberIssuerCountryCode',
-            'required' => false,
-            'subobject' => false,
-            'comment' => 'ISO country codes',
-            'length' => '2',
         ),
     );
 }
