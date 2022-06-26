@@ -15,7 +15,7 @@
  */
 
 /**
- * File:        AdditionalInformationType.php
+ * File:        MultiLabel.php
  * Project:     DHL API
  *
  * @author      Al-Fallouji Bashar
@@ -26,9 +26,9 @@ namespace DHL\Datatype\GB;
 use DHL\Datatype\Base;
 
 /**
- * AdditionalInformationType Request model for DHL API
+ * MultiLabel Request model for DHL API
  */
-class AdditionalInformationType extends Base
+class MultiLabel extends Base
 {
     /**
      * Is this object a subobject
